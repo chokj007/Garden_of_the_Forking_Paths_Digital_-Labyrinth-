@@ -12,6 +12,7 @@
 
 /* General */
 
+
 h1{
   font-family: 'Space Mono', monospace; 
 }
@@ -32,6 +33,11 @@ p{
   font-size: calc(var(--paragprah)/1.5);  
 }
 
+a{
+  color: #c00505;
+  font-size: 15px;
+}
+
 img{
   width: 15vw; 
   /* padding-left: calc(var(--base)/2) */
@@ -43,6 +49,11 @@ img{
   text-shadow: 0 0 2px #000;
   filter: blur(3px);
   -webkit-filter: blur(3px);
+}
+
+#container {
+  position: relative;
+  height: 100%;
 }
 
 .centered{
@@ -59,66 +70,11 @@ img{
 
 .circle {
   background-color: #c00505;
-  border-radius: 50vh;
   position: absolute;
-  opacity: 0.9;
-}
-
-/* Positioning */
-
-.circle:nth-child(1) {
-  top: 25vw;
-  left: 18vw;
-  width: 5vw;
-  height: 5vw;
-}
-
-.circle:nth-child(2) {
-  top: 49vw;
-  left: 69vw;
-  width: 8vw;
-  height: 8vw;
-}
-
-.circle:nth-child(3) {
-  top: 40vw;
-  left: 85vw;
-  width: 3vw;
-  height: 3vw;
-}
-
-.circle:nth-child(4) {
-  top: 7vw;
-  left: 87vw;
-  width: 5vw;
-  height: 5vw;
-}
-
-.circle:nth-child(5) {
-  top: 40vw;
-  left: 90vw;
-  width: 8vw;
-  height: 8vw;
-}
-
-.circle:nth-child(6) {
-  top: 20vw;
-  left: 30vw;
-  width: 3vw;
-  height: 3vw;
-}
-.circle:nth-child(7) {
-  top: 40vw;
-  left: 50vw;
-  width: 5vw;
-  height: 5vw;
-}
-
-.circle:nth-child(8) {
-  top: 39vw;
-  left: 17vw;
-  width: 8vw;
-  height: 8vw;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 .circle:hover {
