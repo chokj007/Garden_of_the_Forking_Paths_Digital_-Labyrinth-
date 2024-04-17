@@ -1,5 +1,6 @@
+/* CSS */
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
 
 :root{
     --page-spacing:30px; 
@@ -8,87 +9,112 @@
     --margin: 1em;  
     --base:5vh;
     --maxwidth: 120ch;
-  } 
+} 
 
 /* General */
-
-
-h1{
-  font-family: 'Space Mono', monospace; 
+h1 {
+    font-family: 'Space Mono', monospace; 
 }
 
-h2{ 
-  font-family: 'Nothing You Could Do', cursive;
+h2 {
+  font-family: "Dancing Script", cursive;
   font-size: var(--paragprah);
+  max-width: calc(var(--maxwidth) * 1.5);
+  line-height: 2rem; 
 }
 
-h3{
-  font-family: 'Nothing You Could Do', cursive;
+h3 {
+  font-family: "Dancing Script", cursive;
   opacity: 0.4;
 
 }
 
-p{
+p {
   font-family: 'Space Mono', monospace; 
   font-size: calc(var(--paragprah)/1.5);  
+  max-width: var(--maxwidth);
 }
 
-a{
-  color: #c00505;
-  font-size: 15px;
+a {
+    color: #c00505;
+    font-size: 15px;
 }
 
-img{
-  width: 15vw; 
-  /* padding-left: calc(var(--base)/2) */
+img {
+    width: 12vw; 
+    /* padding-left: calc(var(--base)/2) */
 }
 
 /* Classes and Id's */
-
 #blur {
-  text-shadow: 0 0 2px #000;
-  filter: blur(3px);
-  -webkit-filter: blur(3px);
+    text-shadow: 0 0 2px #000;
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
 }
 
 #container {
-  position: relative;
-  height: 100%;
+    position: relative;
+    height: 100%;
 }
 
-.centered{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 11.5vw;
-  text-align: center;
-  padding: calc(var(--margin)/2);
-  margin: 0 auto;
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 11.5vw;
+    text-align: center;
+    padding: calc(var(--margin)/2);
+    margin: 0 auto;
+    z-index: 10;
 }
-
-/* Circles */
 
 .circle {
-  background-color: #c00505;
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  cursor: pointer;
+    background-color: #c00505;
+    position: absolute;
+    /* width: 50px;
+    height: 50px; */
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 .circle:hover {
-  transform: scale(1.5);
-  opacity: 0.7;
-  background-color: #680000;
-  transition: 0.2s ease;
+    transform: scale(1.5);
+    opacity: 0.7;
+    background-color: #680000;
+    transition: 0.2s ease;
+}
+
+.instruction {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.instruction p {
+  font-size: 14px;
+  font-family: 'Space Mono', monospace; 
+  color: #333;
+  animation: blink 1s infinite; 
+}
+
+@keyframes blink {
+  0% {
+      opacity: 1;
+  }
+  50% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
 }
 
 .bkg1{ 
   background-color: #000;
 }
 
-.Darkred.two {
+/* .Darkred.two {
  position: absolute;
 }
 
@@ -204,259 +230,30 @@ position: absolute;
   bottom: 0;
   margin-top: calc(var(--base)*7); 
   opacity: 0.3;
-}
-
-/* Media Queries */
-
-
-
-@media (max-width:390px)  { 
-  
-  /* Specifically for phones */
-
-  .leftside{
-    display: none;
-  }
-
-  .Red {
-   padding-top: calc(var(--base)/2);
-   text-align: center;
-   font-size: 1em;
-  }
-}
-
-
-
-@media (max-width:767px){
-
-  /* Phone/smaller */
-
-/* Page 1 */
-
-.Mainimage{
-  margin-top: 10vw; 
-}
-
-.page1{
-  display: block;
-  color:var(--color); 
-  /* padding: calc(var(--base)*2); */
-  margin: auto;
-  position: relative;
-  max-width: 65ch;
-  font-size: 2vw;
-}
-
-.Overlay{
-  display: none;
-}
-
-.rules{
-  display:none
-}
-
-
-/* Page 2 */
-
-.rightside{ 
-  padding: var(--base) 0;
-  font-size: calc(var(--paragprah)/2)
-
-}
-
-.warpedtext{
-  display: none;
-}
-
-.Mainimage.two{
-  margin: 5vw 35vw; 
-}
-
-/* Page 3 */
-
-  .Red{ 
-    display: none;
-    visibility: none;
-    }
- 
-    .farup{ 
-      display: none;
-      visibility: none;
-      }
-
-    .lft.smaller { 
-      display: none;
-      visibility: none;
-    }
-
-    .Smallscreen {
-      padding: 0 calc(var(--base)*2);
-      text-align: center;
-      font-size: calc(var(--paragprah)/3)
-    }
-
-    .Mainimage.three{
-      margin: 5vw 70vw; 
-    }
-
-    /* Page 4 */
-
-      .Mainimage.four { 
-        margin: 60vw 130vw;
-        margin-bottom: 0;
-      }
-
-      .farup2{
-        display:none
-      }
-
-      .Darkred.two {  
-          visibility: visible;
-          display: block;
-          top: 0;
-          position: absolute;
-          max-width: 60ch;
-         font-size: calc(var(--paragprah)/1.7); 
-         margin: 20vw 20vw
-
-      }
-
-      /* Page 5 */
-  .centre{ 
-    display:block; 
-    margin: var(--base); 
-    font-size: calc(var(--paragprah)/3);
-  }
-
-  .image-container:hover {
-    display: none;
-    visibility: hidden;
-    pointer-events: none;
-  }
-
-  /* .RG{
-    margin-left:2vw; 
-    text-align: right;
-    padding:0
-  } */
-
-  .Mainimage.five{ 
-    top: 80vw; 
-    opacity: 0.3;
-  }
-
-  /* Page 6 */
-
-  .Mainimage.six{
-    position: absolute;
-    top: 130vw;
-    left: 45vw; 
-  }
-
-  
-
-}
-
-
-@media (min-width:768px) and (max-width: 1024px) {
-
-  /* Tablet */
-
-  /* Page 2  */
-
-  .rightside {
-    color: var(--color); 
- }
-
- .Mainimage.two {
-  display:block;
-  margin: auto
- }
-
- .warpedtext {
-  display: none;
- }
-
-.rules{
-  display:none; 
-}
-
-/* Page 3 */
-
-  
-  .lft.smaller {
-    display: none;
-    visibility: hidden;
-  }
-  
-  .Smallscreen {
-    padding: 0 calc(var(--base)*2);
-    text-align: center
-  }
-
-  .Red{
-    display: none;
-    visibility: hidden;
-  }
-
-  .Mainimage.three{
-    margin: 3vw 70vw; 
-    margin-bottom: 0
-  }
-
-  .Darkred {
-    margin-bottom: 0;
-  }
-
-  /* Page 4 */
-
-  .farup2{
-    display: none
-  } 
-
-  .Mainimage.four { 
-    /* margin: 75vw 80vw;
-    margin-bottom: 0 */
-    margin-left: 80vw; 
-    margin-top: 30vw
-  }
-
-  .Darkred.two {  
-    top:0;
-    visibility: visible;
-    display: block;
-    margin-bottom: 0;
-    margin: 15vw
-
-}
-
-.centre{ 
-  display:block; 
-  margin: calc(var(--base)*3);
-}
-
-.Mainimage.five { 
-  opacity: 0.5;
-}
-
-/* Page 5 */
-
-/* .RG {
- position: absolute;
- text-align: right;
- pointer-events: none;
 } */
 
+.para { 
+  padding: calc(var(--base)*1.5);
+  padding-left: calc(var(--base)*4.5); 
+  line-height: 30px;
 }
 
-@media (hover: none) {
-
-  Disable hover */
-
-  .image-container:hover {
-    display: inherit;
+@keyframes appear {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
   }
 }
+
+.typing-animation span {
+  opacity: 0;
+  animation: appear 0.0000001s ;
+}
+
+
+/* Media Queries */
 
 
 
@@ -472,19 +269,26 @@ position: absolute;
     margin-top: 0;
     margin: auto;
     padding: var(--base);
-    max-width: var(--maxwidth);
     font-size: calc(var(--base)/4);
-    transition: opacity 0.2s ease-in-out;
+    /* max-width: var(--maxwidth);  */
     }
     
-    .image-container {
+    /* .image-container {
       display: inline;
       margin:var(--base)
-    }
-    .image-container:hover .page1 {
-      opacity: 0.2; /* change the opacity on hover */
-    }
+    } */
 
+    .next-button {
+      padding-left: 90vw;
+      font-family: 'Space Mono', monospace; 
+      font-size: var(--paragprah);
+      color: red; 
+      border: none; 
+      background-color: transparent; 
+      cursor: pointer;
+      z-index: 999;
+      display: none;
+  }
     
     
     /* Page 2 and 3 */
@@ -537,9 +341,9 @@ position: absolute;
     transition: opacity 0.2s ease-in-out;
     }
     
-    .image-container:hover .lft.smaller {
+    /* .image-container:hover .lft.smaller {
      opacity: 0.1 ;
-      }
+      } */
     
     .Red { 
     display: block;
