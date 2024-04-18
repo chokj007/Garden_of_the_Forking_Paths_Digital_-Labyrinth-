@@ -64,30 +64,41 @@ document.addEventListener("DOMContentLoaded", function() {
           circle.style.backgroundColor = '#c00505';
       });
 
-      //links to Page
       if (i === 0) {
-          const link = document.createElement('a');
-          link.href = 'Page1.html';
-          const innerCircle = document.createElement('div');
-          innerCircle.classList.add('circle');
-          link.appendChild(innerCircle);
-          // Set random position for the circle with the link
-          const linkPosition = getRandomPosition(radius);
-          link.style.position = 'absolute';
-          link.style.left = linkPosition.x + 'px';
-          link.style.top = linkPosition.y + 'px';
-          circleContainer.appendChild(link);
-
-          link.addEventListener('mouseenter', function() {
-              innerCircle.style.backgroundColor = '#ff0000'; 
-              innerCircle.style.animation = 'blink 1s infinite'
-          });
-
-          link.addEventListener('mouseleave', function() {
-              innerCircle.style.backgroundColor = '#c00505'; 
-          });
-      } else {
-          circleContainer.appendChild(circle);
-      }
+        const link = document.createElement('a');
+        link.href = 'Page1.html';
+    
+        const innerCircle = document.createElement('div');
+        innerCircle.classList.add('circle');
+        link.appendChild(innerCircle);
+    
+        // Set random position for the circle with the link
+        const linkPosition = getRandomPosition(radius);
+        link.style.position = 'absolute';
+        link.style.left = linkPosition.x + 'px';
+        link.style.top = linkPosition.y + 'px';
+    
+        innerCircle.style.position = 'absolute'; // Set position of inner circle
+        innerCircle.style.left = '50%'; // Center horizontally
+        innerCircle.style.top = '50%'; // Center vertically
+        innerCircle.style.transform = 'translate(-50%, -50%)'; // Center the inner circle
+        innerCircle.style.width = radius + 'px';
+        innerCircle.style.height = radius + 'px';
+    
+        circleContainer.appendChild(link);
+    
+        link.addEventListener('mouseenter', function() {
+            innerCircle.style.backgroundColor = '#ff0000'; 
+            innerCircle.style.animation = 'blink 1s infinite';
+        });
+    
+        link.addEventListener('mouseleave', function() {
+            innerCircle.style.backgroundColor = '#c00505'; 
+        });
+    } else {
+        circleContainer.appendChild(circle);
+    }
+    
+    
   }
 });
