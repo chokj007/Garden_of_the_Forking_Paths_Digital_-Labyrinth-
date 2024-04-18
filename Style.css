@@ -14,7 +14,7 @@
 /* General */
 h1 {
     font-family: 'Space Mono', monospace; 
-    color: var(--color)
+    /* color: var(--color) */
 }
 
 h2 {
