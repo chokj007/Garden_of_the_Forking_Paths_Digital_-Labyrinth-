@@ -62,7 +62,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 11.5vw;
+    font-size: 9vw;
     text-align: center;
     padding: calc(var(--margin)/2);
     margin: 0 auto;
