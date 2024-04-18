@@ -220,6 +220,13 @@ img {
   margin-bottom: 0
 }
 
+.options { 
+  font-family: 'Space Mono', monospace; 
+  color: red; 
+  cursor: pointer;
+  z-index: 999;
+}
+
 /* Media Queries */
 
 
@@ -258,13 +265,6 @@ img {
     
     
     /* Page 2 and 3 */
-
-    .options { 
-      font-family: 'Space Mono', monospace; 
-      color: red; 
-      cursor: pointer;
-      z-index: 999;
-    }
 
     .smallerText { 
       font-size: 12px
