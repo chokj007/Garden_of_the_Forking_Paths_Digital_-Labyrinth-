@@ -23,6 +23,6 @@ setTimeout(function() {
             window.opened[i].close();
         }
     }
-    window.location.href = 'Index.html';
+    window.location.href = 'index.html';
 }, 300000); // 5 minutes in milliseconds
 }

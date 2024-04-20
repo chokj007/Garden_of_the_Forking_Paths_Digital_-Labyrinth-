@@ -56,6 +56,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     setTimeout(function () {
         closeModal();
-        window.location.href = "Index.html"; 
+        window.location.href = "index.html"; 
     }, 300000);
 });
