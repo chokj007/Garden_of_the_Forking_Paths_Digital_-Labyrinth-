@@ -122,7 +122,7 @@ img {
 
 .para { 
   padding: calc(var(--base)*1.5);
-  padding-left: calc(var(--base)*4.5); 
+  padding-left: calc(var(--base)*6); 
   line-height: 30px;
   color: var(--color)
 }
@@ -227,6 +227,34 @@ img {
   z-index: 999;
 }
 
+.textBox {
+  background-color: red; 
+  color: rgba(255, 255, 255, 0.8); 
+  padding: 10px; 
+  border-radius: 5px; 
+  font-size: 16px; 
+  font-weight: bold; 
+  opacity: 0.4; 
+}
+
+/* .redacted {
+  background-color: black;
+}
+
+#restartButton {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+  opacity: 0.5;
+} */
+
+
 /* Media Queries */
 
 
@@ -244,6 +272,11 @@ img {
     padding: var(--base);
     font-size: calc(var(--base)/4);
     /* max-width: var(--maxwidth);  */
+    }
+
+    .p1{ 
+      padding-top: calc(var(--margin)*10); 
+      padding-left: calc(var(--margin)*3)
     }
     
     .image-container {

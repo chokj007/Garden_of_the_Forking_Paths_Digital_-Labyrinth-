@@ -8,7 +8,7 @@
         startTimer();
     }
     function startTimer() {
-        timeoutId = setTimeout(redirectToPage, 120000); // 2 minutes in milliseconds
+        timeoutId = setTimeout(redirectToPage, 300000); 
     }
 
     document.addEventListener("mousemove", resetTimer);

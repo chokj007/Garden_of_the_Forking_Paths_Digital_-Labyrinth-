@@ -27,7 +27,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }, index * 200); 
     });
 
-    // Function to show "Unknown issue" and "Reload" button
     function showReload() {
         var reloadContainer = document.getElementById('reload-container');
         reloadContainer.style.display = 'block'
