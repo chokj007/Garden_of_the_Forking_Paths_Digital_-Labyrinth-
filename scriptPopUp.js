@@ -56,7 +56,7 @@ function displayTextInOrder() {
 
         currentIndex++;
 
-        var randomInterval = Math.floor(Math.random() * (60000 - 5000 + 1)) + 5000;
+        var randomInterval = Math.floor(Math.random() * (30000 - 5000 + 1)) + 5000;
 
         setTimeout(displayTextInOrder, randomInterval);
     }
