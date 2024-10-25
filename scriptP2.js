@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
         var dobInput = document.getElementById('dob-input');
     dobInput.addEventListener('input', function(event) {
         // Filter out non-numeric characters
-        var newValue = event.target.value.replace(/\D/g, '');
+        var newValue = event.target.value.replace(/\D/g, ''); //figure this line out again
         event.target.value = newValue;
     });
 

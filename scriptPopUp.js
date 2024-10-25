@@ -68,7 +68,7 @@ setTimeout(function() {
 
 
 function openWindows() {
-    window.close();
+    window.close(); // Close the current window
     var urls = [
         'P3a.html',
         'P3b.html',
@@ -77,16 +77,20 @@ function openWindows() {
         'P3e.html',
         'P3f.html',
     ];
-    for (let i = 0; i < 6; i++) {
-        window.open(urls[i], '', 'width=400,height=400');
+    var openedWindows = []; // Array to store references to the opened windows
+
+    for (let i = 0; i < urls.length; i++) {
+        // Open each URL and store the window reference
+        openedWindows[i] = window.open(urls[i], '', 'width=400,height=400');
     }
 
-setTimeout(function() {
-    for (let i = 0; i < 6; i++) {
-        if (window.opened[i] && !window.opened[i].closed) {
-            window.opened[i].close();
+    // Set a timeout to close each opened window after 5 minutes
+    setTimeout(function() {
+        for (let i = 0; i < openedWindows.length; i++) {
+            if (openedWindows[i] && !openedWindows[i].closed) {
+                openedWindows[i].close(); // Close the window if it's open
+            }
         }
-    }
-    window.location.href = 'index.html';
-}, 300000); // 5 minutes in milliseconds
+        window.location.href = 'index.html'; 
+    }, 300000); 
 }
