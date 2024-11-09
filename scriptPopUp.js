@@ -68,20 +68,29 @@ setTimeout(function() {
 
 
 function openWindows() {
-    window.close(); // Close the current window
+    window.close(); // Close the current window 
+    // const1 = "P3a.html"
+    // const2 = "P3b.html"
+    // const3 = "P3c.html"
+    // const4 = "P3d.html"
+    // const5 = "P3e.html"
+    // const6 = "P3f.html"
+
     var urls = [
-        'P3a.html',
-        'P3b.html',
-        'P3c.html',
-        'P3d.html',
-        'P3e.html',
-        'P3f.html',
+        "P3a.html",
+        "P3b.html",
+        "P3c.html",
+        "P3d.html",
+        "P3e.html",
+        "P3f.html",
     ];
     var openedWindows = []; // Array to store references to the opened windows
 
     for (let i = 0; i < urls.length; i++) {
         // Open each URL and store the window reference
         openedWindows[i] = window.open(urls[i], '', 'width=400,height=400');
+        // openedWindows[i] = window.open(const1, const2, const3, const4, const5, const6, '', 'width=400,height=400');
+        
     }
 
     // Set a timeout to close each opened window after 5 minutes
@@ -94,3 +103,32 @@ function openWindows() {
         window.location.href = 'index.html'; 
     }, 300000); 
 }
+
+// function openWindows() {
+//     var urls = [
+//         "P3a.html",
+//         "P3b.html",
+//         "P3c.html",
+//         "P3d.html",
+//         "P3e.html",
+//         "P3f.html",
+//     ];
+//     var openedWindows = []; // Array to store references to the opened windows
+
+//     // Open each URL
+//     urls.forEach((url, i) => {
+//         openedWindows[i] = window.open(url, '', 'width=400,height=400');
+//     });
+
+//     // Set a timeout to close each opened window after 5 minutes
+//     setTimeout(function() {
+//         for (let i = 0; i < openedWindows.length; i++) {
+//             if (openedWindows[i] && !openedWindows[i].closed) {
+//                 openedWindows[i].close(); // Close the window if it's open
+//             }
+//         }
+//         window.location.href = 'index.html'; 
+//     }, 300000); 
+// }
+
+
